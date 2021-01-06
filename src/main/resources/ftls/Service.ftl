@@ -49,7 +49,7 @@ public class ${ClassName}Service${Impl} {
     }
 
     ${Override}
-    public ${ClassName} listByIds(List<String> ids){
+    public List<${ClassName}> listByIds(List<String> ids){
         if (CollUtil.isEmpty(ids)) {
             return Collections.EMPTY_LIST;
         }
@@ -85,7 +85,7 @@ public class ${ClassName}Service${Impl} {
             return 0;
         }
         ${ClassName} entity = new ${ClassName}();
-        BeanUtils.copyProperties(detail,response);
+        BeanUtils.copyProperties(request,entity);
         return this.insert(entity);
     }
 
@@ -105,7 +105,7 @@ public class ${ClassName}Service${Impl} {
             return 0;
         }
         ${ClassName} entity = new ${ClassName}();
-        BeanUtils.copyProperties(detail,response);
+        BeanUtils.copyProperties(request,entity);
         return this.update(entity);
     }
 

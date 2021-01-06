@@ -14,7 +14,7 @@ public interface ${ClassName}Service {
 
     /**
     * 根据请求获取值班列表
-    * @param requestPageInfo
+    * @param request
     * @return
     */
     PageResult<${ClassName}ListResponse> listPageByRequest(PageInfo<${ClassName}ListRequest> request);
