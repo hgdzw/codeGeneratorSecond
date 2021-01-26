@@ -16,7 +16,7 @@ public class Main {
     }
     public static void single() {
         AnaTask invoker = new SingleInvoker.Builder()
-                .setTableName("site_data")
+                .setTableName("notice")
                 //.setClassName("Global_Dict")
                 .build();
         invoker.execute();

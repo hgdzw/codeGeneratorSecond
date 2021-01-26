@@ -36,6 +36,7 @@ public class ${ClassName}Service${Impl} {
                 ${ClassName}ListResponse response = new ${ClassName}ListResponse();
                 BeanUtils.copyProperties(entity,response);
                 response.setSort(++startIndex);
+                arrayList.add(response);
             }
             return new PageResult(requestPageInfo.getPageIndex(), Integer.valueOf(String.valueOf(page.getTotal())), arrayList);
         }else {

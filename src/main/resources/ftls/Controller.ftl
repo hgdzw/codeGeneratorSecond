@@ -29,7 +29,7 @@ public class ${ClassName}Controller {
     @GetMapping(value = "/listPageByRequest")
     public QcResponse<PageResult<${ClassName}ListResponse>> listPageByRequest(@RequestBody PageInfo<${ClassName}ListRequest> request) {
 
-        PageResult<${ClassName}> ${EntityName}s = ${EntityName}Service.listPageByRequest(request);
+        PageResult<${ClassName}ListResponse> ${EntityName}s = ${EntityName}Service.listPageByRequest(request);
         return QcResponse.success(${EntityName}s);
 
     }
