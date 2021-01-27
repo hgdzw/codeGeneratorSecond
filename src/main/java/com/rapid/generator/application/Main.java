@@ -16,7 +16,7 @@ public class Main {
     }
     public static void single() {
         AnaTask invoker = new SingleInvoker.Builder()
-                .setTableName("notice")
+                .setTableName("plat_appendix")
                 //.setClassName("Global_Dict")
                 .build();
         invoker.execute();

@@ -75,7 +75,7 @@
     </update>
 
     <delete id="deleteById">
-        UPDATE ${TableName} SET available = 0 WHERE id = id;
+        UPDATE ${TableName} SET available = 0 WHERE id = #{id};
     </delete>
 
     <select id="listByIds" resultMap="${EntityName}ResultMap">
