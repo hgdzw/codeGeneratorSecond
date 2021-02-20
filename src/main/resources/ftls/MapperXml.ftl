@@ -17,7 +17,7 @@
     </sql>
 
 
-    <select id="listByRequest">
+    <select id="listByRequest" resultMap="${EntityName}ResultMap">
         SELECT
         <include refid="${EntityName}Columns" />
         FROM ${TableName} <include refid="${EntityName}Joins" />
