@@ -7,6 +7,7 @@ import ${BasePackageName}service.biz.${ClassName}Service;
 import ${BasePackageName}dao.base.AdaBaseMapper;
 import ${BasePackageName}dao.${EntityPackageName}.${ClassName};
 import cn.hutool.core.collection.CollUtil;
+import org.springframework.beans.BeanUtils;
 
 <#--${InterfaceImport}-->
 import org.springframework.beans.factory.annotation.Autowired;

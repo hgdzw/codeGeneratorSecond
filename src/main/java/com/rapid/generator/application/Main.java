@@ -16,7 +16,7 @@ public class Main {
     }
     public static void single() {
         AnaTask invoker = new SingleInvoker.Builder()
-                .setTableName("plat_appendix")
+                .setTableName("cms_article_category_mapping")
                 //.setClassName("Global_Dict")
                 .build();
         invoker.execute();

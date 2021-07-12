@@ -26,7 +26,7 @@ public class ${ClassName}Controller {
     private ${ClassName}Service ${EntityName}Service;
 
     @ApiOperation(value = "${ClassName}数据 listPageByRequest")
-    @GetMapping(value = "/listPageByRequest")
+    @PostMapping(value = "/listPageByRequest")
     public QcResponse<PageResult<${ClassName}ListResponse>> listPageByRequest(@RequestBody PageInfo<${ClassName}ListRequest> request) {
 
         PageResult<${ClassName}ListResponse> ${EntityName}s = ${EntityName}Service.listPageByRequest(request);
