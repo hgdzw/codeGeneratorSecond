@@ -28,7 +28,7 @@ public class DefaultConvertor implements TypeConvertor {
                 sb.append("short");
                 break;
             case INTEGER:
-                sb.append("int");
+                sb.append("Integer");
                 break;
             case BIGINT:
                 sb.append("long");
@@ -59,7 +59,7 @@ public class DefaultConvertor implements TypeConvertor {
                 sb.append("Time");
                 break;
             case TIMESTAMP:
-                sb.append("Timestamp");
+                sb.append("Date");
                 break;
             case CLOB:
             case NCLOB:

@@ -3,6 +3,8 @@ package com.rapid.generator.application;
 import com.rapid.generator.invoker.base.*;
 import com.rapid.generator.invoker.*;
 
+import java.util.ArrayList;
+
 /**
  * Author GreedyStar
  * Date   2018/9/5
@@ -15,11 +17,15 @@ public class Main {
         single();
     }
     public static void single() {
-        AnaTask invoker = new SingleInvoker.Builder()
-                .setTableName("cms_article_category_mapping")
-                //.setClassName("Global_Dict")
-                .build();
-        invoker.execute();
+        ArrayList<String> tableList = new ArrayList<>();
+        tableList.add("diy_common_menu");
+        for (String tableName : tableList) {
+            AnaTask invoker = new SingleInvoker.Builder()
+                    .setTableName(tableName)
+                    //.setClassName("Global_Dict")
+                    .build();
+            invoker.execute();
+        }
     }
 
 }
