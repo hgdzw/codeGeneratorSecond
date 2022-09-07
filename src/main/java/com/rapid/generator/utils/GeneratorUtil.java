@@ -438,7 +438,12 @@ public class GeneratorUtil {
                 sb.append(SPACE_8);
             }
             //sb.append("<if test=\"realName != null and realName != ''\">,\n");
-            sb.append("<if test=\"").append(infos.get(i).getPropertyName()).append("!=null and ").append(infos.get(i).getPropertyName()).append("!= ''\">\n");
+//            字符串判空 其他的不用
+            if (infos.get(i).getType().getName().equals("VARCHAR")) {
+                sb.append("<if test=\"").append(infos.get(i).getPropertyName()).append("!=null and ").append(infos.get(i).getPropertyName()).append("!= ''\">\n");
+            }else {
+                sb.append("<if test=\"").append(infos.get(i).getPropertyName()).append("!=null\">\n");
+            }
             sb.append("            ").append(infos.get(i).getColumnName()).append(" = #{").append(infos.get(i).getPropertyName()).append("},\n");
             sb.append("        </if>  \n");
         }
@@ -456,7 +461,11 @@ public class GeneratorUtil {
             if (i != 0) {
                 sb.append(SPACE_8);
             }
-            sb.append("<if test=\"").append(infos.get(i).getPropertyName()).append("!=null and ").append(infos.get(i).getPropertyName()).append("!= ''\">\n");
+            if (infos.get(i).getType().getName().equals("VARCHAR")) {
+                sb.append("<if test=\"").append(infos.get(i).getPropertyName()).append("!=null and ").append(infos.get(i).getPropertyName()).append("!= ''\">\n");
+            }else {
+                sb.append("<if test=\"").append(infos.get(i).getPropertyName()).append("!=null\">\n");
+            }
             sb.append("            and ").append(infos.get(i).getColumnName()).append(" = #{").append(infos.get(i).getPropertyName()).append("}\n");
             sb.append("        </if>   \n");
         }

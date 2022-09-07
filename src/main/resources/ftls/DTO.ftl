@@ -3,7 +3,7 @@ package ${BasePackageName}dto.${EntityPackageName};
 import java.io.Serializable;
 import java.util.List;
 import java.math.BigDecimal;
-import java.sql.Date;
+import java.util.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
 import io.swagger.annotations.ApiModel;
