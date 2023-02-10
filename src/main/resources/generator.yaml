@@ -1,7 +1,10 @@
 db:
-  url: jdbc:mysql://172.16.10.20:3306/qcplatform?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true
+#  url: jdbc:mysql://172.16.30.52:3306/qcplatform?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true
+  url: jdbc:mysql://127.0.0.1:3306/qc?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useAffectedRows=true
+#  username: testenv
   username: root
-  password: root1234
+#  password: Feh*i754#21
+  password: 123456
 author: dongzhiwei
 packageName: com.qc.platform
 convertor:

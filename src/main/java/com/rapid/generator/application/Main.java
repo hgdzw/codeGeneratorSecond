@@ -18,10 +18,8 @@ public class Main {
     }
     public static void single() {
         ArrayList<String> tableList = new ArrayList<>();
-        tableList.add("entrance_guard_device");
-        tableList.add("entrance_guard_door");
-        tableList.add("entrance_guard_record");
-        tableList.add("entrance_guard_cmd");
+        tableList.add("diy_individual_center");
+//        tableList.add("carbon_code");
         for (String tableName : tableList) {
             AnaTask invoker = new SingleInvoker.Builder()
                     .setTableName(tableName)
